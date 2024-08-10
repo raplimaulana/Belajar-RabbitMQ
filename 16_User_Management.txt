@@ -1,0 +1,49 @@
+### USER MANAGEMENT ###
+Saat pertama kali menginstall RabbitMQ dan Plugin Web Management, terdapat default user yaitu guest yang bisa digunakan untuk masuk ke Web Management.
+Saat nanti kita Publish Message atau Consume Message pun, nanti kita perlu menggunakan user.
+Untuk melihat informasi User yang terdapat di RabbitMQ, kita bisa menggunakan menu Admin > Users.
+
+Untuk membuat User, kita hanya cukup menambahkan informasi Username, Password dan Tags
+Tags adalah informasi yang digunakan Web Management untuk mengecek kemampuan apa yang bisa dilakukan oleh User tersebut
+
+##User Tag 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Tag          |             Keterangan                                                                                                                    |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| None         | Tidak bisa mengakses web management                                                                                                       |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Management   | Bisa mengakses web management, mengakses virtual host yang diperbolehkan, exchange, queue dan bindings di virtual host yang diperbolehkan |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Policymaker  | Semua di management, plus mengelola policy                                                                                                |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Monitoring   | Semua di management, dan melihat semua informasi di virtual host                                                                          |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Administrator| Bisa melakukan apapun                                                                                                                     |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+##Permission
+Secara default, saat kita membuat User, walaupun bisa login dan masuk ke web management, namun User tidak bisa mengakses Virtual Host.
+Oleh karena itu, kita perlu menambahkan permission untuk bisa mengakses Virtual Host.
+Saat menambahkan Permission, kita harus menentukan regular expression untuk operasi mana yang diperbolehkan.
+RabbitMQ menggunakan standard operasi AMQP. Operasi di-grup kan berdasarkan 3 grup, Configure, Write dan Read.
+
+*https://www.rabbitmq.com/access-control.html#authorisation
+
+---
+
+##Membuat User 
+Admin > Users > Add a user 
+
+Username: rapli
+Password: test123
+Tags: Management 
+
+
+##Membuat Permission 
+Admin > Users > Permissions
+
+Virtual Host: finance
+Configure regexp: .*
+Write regexp: .*
+Read regexp: .*
+ 

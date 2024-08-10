@@ -1,0 +1,7 @@
+### DIRECT EXCHANGE ###
+Sebelumnya kita sudah membuat Exchange menggunakan type direct.
+Direct Exchange adalah tipe exchange yang ketika menerima data, dia akan merutekan data tersebut ke Queue yang sesuai dengan routing key saat proses binding.
+Jika kita mengirim data ke Exchange dengan routing key yang tidak ada di Binding ke Queue, maka secara otomatis data akan dikirim ke Alternate-Exchange, jika tidak ada Alternate Exchange, maka data akan hilang secara otomatis.
+
+Saat melakukan perutean menggunakan Direct Exchange, tidak ada batasan untuk melakukan binding ke Queue yang sama, bahkan menggunakan routing key yang berbeda.
+Misal, kita membuat Queue baru bernama all_notification, lalu membuat binding untuk routing key email, sms dan whatsapp. Hal itu diperbolehkan.

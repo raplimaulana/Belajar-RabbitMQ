@@ -1,0 +1,8 @@
+### NODE.JS RABBITMQ ###
+
+##Membuat Project NodeJS
+1. Buat folder belajar-nodej-rabbitmq
+2. npm init
+3. npm install amqplib
+4. npm install @types/amqplib (https://github.com/amqp-node/amqplib) 
+5. Ubah type di package.json menjadi module

@@ -1,0 +1,29 @@
+### POLICY ###
+Saat kita membuat Exchange atau Queue, kita bisa menambahkan Arguments.
+Policy adalah fitur dimana kita bisa menambahkan Arguments secara otomatis pada Exchange atau Queue secara otomatis tanpa harus menambahkan satu per satu secara manual.
+
+##Membuat Policy
+1. Untuk membuat Policy, kita bisa menggunakan menu Admin > Policies > Add / update a policy. 
+2. Saat membuat Policy, kita perlu menentukan beberapa informasi :
+   - Name 
+     Nama Policy nya.
+
+   - Pattern
+     Regular expression pemilihan Exchange atau Queue yang ingin ditambahkan Policy nya.
+
+   - Priority 
+     Jika terdapat Policy yang berbeda untuk Exchange atau Queue yang sama, maka akan diurutkan sesuai priority, karena Policy cuma bisa digunakan satu saja.
+
+   - Definition 
+     Arguments yang akan ditambahkan ke Exchange atau Queue.
+
+---
+
+##Membuat Policy
+
+Virtual host: /
+Name: Max length 100
+Pattern: .*
+Apply to: Queues
+Priority: 
+Definition: max-length = 100 Number

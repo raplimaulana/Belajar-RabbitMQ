@@ -1,0 +1,15 @@
+### CONSUME MESSAGE ###
+
+##Queue
+Membaca data dari Queue disebut dengan Consume Message.
+Message yang sudah di Consume, otomatis akan hilang dari Queue.
+Queue itu merupakan struktur data dalam bentuk antrian, artinya siapa yang pertama masuk, dia yang akan diproses duluan.
+
+##Consume Message
+Untuk melakukan Consume Message, kita bisa menggunakan Web Management di RabbitMQ.
+Kita bisa buka Queue yang ingin kita baca message nya, lalu buka pada menu Get Messages.
+
+Queues and Streams > Get message
+Ack Mode: Automatic ack (setelah dibaca, datanya akan hilang)
+          Nack message requeue true (setelah dibaca, datanya akan diantrikan kembali ke queue)
+Encoding: Auto string / base64

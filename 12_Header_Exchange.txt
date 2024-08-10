@@ -1,0 +1,39 @@
+### HEADER EXCHANGE ###
+Header Exchange adalah Exchange yang melakukan perutean data ke Queue menggunakan Header di Message.
+Exchange akan merutekan sesuai dengan Attribute di Binding yang sesuai dengan Header di Message.
+
+
+---
+
+#Membuat Exchange
+Exchange > Add a new exchanges 
+
+Name: download
+Type: header
+Durability: Durable
+Auto delete: no 
+Internal: no
+
+
+#Membuat Queue 
+Queue and Streams > Add a new queue 
+
+Virtual host: /
+Type: Quorum 
+Name: download_report_pdf
+
+
+#Membuat Binding
+Queues and Streams > Bindings > Add binding to this queue.
+
+From exchange: download
+Routing key: download_report_pdf
+Arguments: type = report 
+           format = pdf
+
+#Publish Message 
+Routing key: bebas
+Header: type = report String 
+        format = pdf  String 
+Properties:
+Payload: Contoh kirim data report

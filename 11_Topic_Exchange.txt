@@ -1,0 +1,49 @@
+### TOPIC EXCHANGE ###
+Topic Exchange merupakan Exchange mirip dengan Direct Exchange, dimana Exchange akan merutekan message ke Queue sesuai dengan routine key nya.
+Hanya saja pada Topic Exchange, routing key menggunakan kata-kata yang dipisahkan menggunakan titik.
+Misal, customers.event.update, customers.event.new, customers.event.delete.
+
+##Topic Exchange Binding
+Saat Queue melakukan Binding ke Topic Exchange, kita bisa menggunakan tanda :
+1. * 
+   Digunakan untuk satu kata. Contoh:
+   - customers.event.* 
+     Bisa untuk routing key customers.event.new, customers.event.update, customers.event.delete
+
+   - *.event.* 
+     Bisa untuk customers.event.a, sellers.event.b
+
+2. # 
+   Digunakan untuk nol atau lebih kata. Contoh: 
+   - # 
+     Bisa untuk semua routing.
+ 
+   - customers.# 
+     Bisa untuk routing key customers.a, customers.a.b, customers.a.b.c
+
+---
+
+#Membuat Exchange
+Exchange > Add a new exchanges 
+
+Name: events
+Type: topic
+Durability: Durable
+Auto delete: no 
+Internal: no
+
+
+#Membuat Queue 
+Queue and Streams > Add a new queue 
+
+Virtual host: /
+Type: Quorum 
+Name: all_events
+
+
+#Membuat Binding
+Queues and Streams > Bindings > Add binding to this queue.
+
+From exchange: events 
+Routing key: *.events.*
+

@@ -1,0 +1,30 @@
+### QUEUE ###
+Queue (antrian), adalah tempat untuk menyimpan data yang diterima oleh Exchange.
+Exchange itu seperti gerbang untuk menerima data, Exchange nanti akan meneruskan data yang diterima ke Queue.
+Jika kita membuat Exchange yang tidak memiliki Queue, maka data akan hilang di Exchange, karena Exchange bukan untuk menyimpan data.
+Queue digunakan oleh Consumer (penerima data).
+
+##Membuat Queue
+1. Akses web management http://localhost:15672/.
+2. Pilih bagian Queues and Streams.
+3. Saat membuat Queue, kita harus menentukan seperti;
+   - Virtual Host 
+     Informasi Virtual Host yang digunakan. default menggunakan "/"
+
+   - Type 
+     Tipe untuk Queue. Saat ini direkomendasikan menggunakan Quorum, Classic sudah tidak disarankan untuk digunakan, dan Stream digunakan untuk kebutuhan Data Streaming.
+
+   - Name
+     Nama queue nya.
+   
+   - Arguments 
+     Informasi tambahan Queue.
+
+---
+
+##Mmbuat Queue 
+Virtual host: /
+Type: Quorum 
+Name: email
+Argument: x-message-ttl = 1000 Number
+          x-max-length = 5     Number

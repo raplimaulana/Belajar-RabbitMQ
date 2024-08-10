@@ -1,0 +1,11 @@
+### VIRTUAL HOST ###
+RabbitMQ memiliki konsep seperti Virtual Machine bernama Virtual Host.
+Dengan menggunakan Virtual Host, kita bisa membuat Exchange dan Queue terpisah-pisah dalam Virtual Host.
+Misal, saat RabbitMQ digunakan oleh banyak sekali tim, kita bisa buat tiap tim memiliki Virtual Host masing-masing, sehingga Exchange dan Queue antar tim tidak akan bentrok.
+Saat pertama kali menginstall RabbitMQ, secara default terdapat 1 Virtual Host bernama / (slash).
+
+##Membuat Virtual Host
+Admin > Virtual Hosts > Add a new virtual host 
+
+Name: finance
+Default Queue Type: Quorum

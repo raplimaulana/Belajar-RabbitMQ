@@ -1,0 +1,56 @@
+### EXCHANGE ###
+Saat pengirim data mengirim data ke RabbitMQ, data harus dikirim ke Exchange.
+Jadi data, tidak langsung dikirimkan ke penerima data, melainkan akan diterima di Exchange terlebih dahulu.
+Setelah diterima di Exchange, data akan ditentukan harus dilanjutkan kemana, sesuai dengan tipe dari Exchange-nya, yang akan dibahas di materi masing-masing untuk tiap tipe Exchange-nya.
+
+##Membuat Exchange 
+1. Akses web management http://localhost:15672/.
+2. Pilih bagian Exchange.
+3. Saat membuat Exchange, kita harus menentukan seperti;
+  - Name 
+    Nama exchange nya.
+
+  - Type
+    Tipe exchange nya.
+    - Direct Exchange
+      Routing Key: Pesan diteruskan ke queue yang routing key-nya sama dengan routing key dari pesan tersebut.
+      Penggunaan: Berguna ketika kita ingin mengirim pesan ke queue yang diidentifikasi oleh key tertentu.
+      Contoh: Jika pesan memiliki routing key "info" dan exchange memiliki queue dengan routing key "info", maka pesan tersebut akan diarahkan ke queue tersebut.
+
+    - Fanout Exchange:
+      Routing Key: Diabaikan.
+      Penggunaan: Broadcast pesan ke semua queue didalam exchange, tanpa memperhatikan routing key.
+      Contoh: Pesan yang dikirim ke fanout exchange akan dikirim ke semua queue di dalam exchange tersebut.
+
+    - Topic Exchange:
+      Routing Key: Pesan diteruskan berdasarkan pattern.
+      Penggunaan: Berguna untuk mengarahkan pesan ke satu atau lebih queue berdasarkan pattern dalam routing key.
+      Contoh: Jika queue memiliki pattern seperti "user.*", maka queue tersebut akan menerima pesan dengan routing key seperti "user.created", "user.deleted".
+
+    - Headers Exchange:
+      Routing Key: Routing menggunakan header dari pesan (tidak menggunakan routing key).
+      Penggunaan: Berguna ketika keputusan routing didasarkan pada beberapa atribut, bukan pada routing key.
+      Contoh: Pesan dengan header yang sesuai dengan pattern yang ditentukan dalam binding akan diarahkan ke queue yang terkait.
+
+  - Durability
+    Apakah exchange tetap ada setelah RabbitMQ di restart. 
+    - Durable (tetap ada setelah di restart). 
+    - Transient (hilang setelah di restart).
+
+  - Auto Delete
+    Apakah Exchange otomatis dihapus ketika semua Queue di unbind.
+
+  - Internal
+    Artinya Exchange tidak bisa digunakan oleh Producer, hanya bisa digunakan di internal RabbitMQ.
+
+  - Alternate-Exchange
+    Jika data tidak berhasil dikirim ke Queue, maka akan dikirim ke Alternate-Exchange.
+
+---
+
+##Membuat Exchange
+Name : notification
+Type: direct 
+Durability: Durable
+Auto delete: no 
+Internal: no

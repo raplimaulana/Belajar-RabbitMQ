@@ -1,0 +1,7 @@
+### PHP RABBITMQ ###
+
+##Membuat Project PHP
+1. Buat folder belajar-php-rabbitmq
+2. composer init
+3. composer require php-amqplib/php-amqplib
+4. composer dump-autoload (https://github.com/php-amqplib/php-amqplib) 

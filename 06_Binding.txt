@@ -1,0 +1,13 @@
+### BINDING ###
+Binding merupakan koneksi yang merelasikan antara Exchange dan Queue.
+Saat kita membuat Exchange dan Queue, secara default kedua hal itu tidak akan terhubung, kita harus menghubungkannya dengan melakukan Binding.
+
+Di RabbitMQ, kita bisa melakukan Binding dari satu Exchange ke beberapa Queue.
+Begitu juga sebaliknya, bisa melakukan Binding dari satu Queue ke beberapa Exchange.
+
+##Membuat Binding
+1. Akses web management http://localhost:15672/.
+2. Pilih bagian Queues and Streams > Bindings > Add binding to this queue.
+   From exchange: notification 
+   Routing key: email 
+3. Cek di bagian Exchanges > Binding, seharusnya ada bind baru.

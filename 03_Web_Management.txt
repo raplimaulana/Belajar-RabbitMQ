@@ -1,0 +1,12 @@
+### WEB MANAGEMENT ###
+RabbitMQ memiliki plugin bernama Web Management.
+Plugin ini digunakan untuk mengoperasikan RabbitMQ menggunakan halaman Web.
+Kita akan menginstall plugin ini, agar mempermudah saat mengoperasikan fitur-fitur yang terdapat di RabbitMQ (https://www.rabbitmq.com/management.html)
+
+#mengaktifkan plugin web management
+rabbitmq-plugins enable rabbitmq_management
+
+#membuka halaman web management RabbitMQ menggunakan user guest dan password guest
+http://localhost:15672/
+
+

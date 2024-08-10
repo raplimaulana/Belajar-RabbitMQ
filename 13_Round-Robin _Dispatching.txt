@@ -1,0 +1,4 @@
+### ROUND-ROBIN DISPATCHING ###
+Salah satu keuntungan menggunakan Queue adalah, kita bisa menjalankan Consumer lebih dari satu.
+Dengan kemampuan ini, jika kita bisa menjadikan pemrosesan data di Queue bisa dilakukan secara paralel dan dilakukan lebih cepat.
+

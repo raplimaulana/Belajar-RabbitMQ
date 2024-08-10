@@ -1,0 +1,5 @@
+### JAVA RABBITMQ ###
+
+##Membuat Project Java
+1. https://start.spring.io/
+2. Tambahkan dependency RabbitMQ

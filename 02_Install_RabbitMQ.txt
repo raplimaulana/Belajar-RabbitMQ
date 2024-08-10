@@ -1,0 +1,14 @@
+### INSTALL RABBITMQ ###
+Untuk menginstall RabbitMQ, kita perlu download distribution file RabbitMQ terlebih dahulu (https://rabbitmq.com/download.html).
+Silahkan download file distribution untuk RabbitMQ sesuai dengan sistem operasi yang digunakan, lalu install pada sistem operasi yang digunakan.
+
+Setelah menginstall RabbitMQ dengan benar, maka RabbitMQ akan menginstall banyak executable file berbasis terminal pada sistem operasi yang kita gunakan.
+Kebanyakan executable file miliki RabbitMQ menggunakan awalan rabbitmq, misal rabbitmqctl, rabbitmqadmin, rabbitmq-server, rabbitmq-plugins, dan lain-lain.
+
+Untuk menjalankan aplikasi RabbitMQ, tiap sistem operasi berbeda-beda, oleh karena itu saya sarankan untuk membaca caranya di halaman https://www.rabbitmq.com/download.html 
+Jika aplikasi RabbitMQ sudah berjalan dengan benar, kita bisa mengeceknya menggunakan terminal dengan perintah :
+rabbitmqctl status
+
+*Jika statusnya error, berarti RabbitMQ belum berjalan dengan benar
+
+##

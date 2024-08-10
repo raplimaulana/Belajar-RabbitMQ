@@ -1,0 +1,6 @@
+### CLIENT LIBRARY ###
+Untuk berinteraksi dengan RabbitMQ, kita bisa menggunakan Client Library.
+Client Library adalah kode-kode yang disediakan untuk digunakan agar bisa berinteraksi dengan RabbitMQ dengan mudah.
+Client Library harus disesuaikan dengan teknologi yang kita gunakan.
+RabbitMQ mendukung banyak sekali Client Library (https://www.rabbitmq.com/devtools.html)  
+Di materi-materi selanjutnya, kita akan menggunakan Golang, NodeJS, Java dan PHP untuk berinteraksi dengan RabbitMQ.

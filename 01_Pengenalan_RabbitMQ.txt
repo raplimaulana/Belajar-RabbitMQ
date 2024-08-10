@@ -1,0 +1,12 @@
+### PENGENALAN RABBITMQ ###
+RabbitMQ adalah salah satu aplikasi perantara (Message Broker) untuk komunikasi Messaging.
+RabbitMQ adalah aplikasi yang OpenSource dan Gratis, sehingga kita bisa bebas menggunakannya.
+RabbitMQ merupakan salah satu aplikasi Message Broker yang ringan dan bisa install di hampir semua sistem operasi, Windows, Linux dan Mac.
+
+RabbitMQ sangat ringan, sehingga tidak butuh banyak resource hardware untuk menggunakannya.
+Didukung oleh ekosistem yang besar sehingga dukungan untuk teknologi dan bahasa pemrograman sangat banyak, seperti Java, .NET, Ruby, C/C++, PHP, Golang, Scala, Python, dan lain-lain.
+High Availability, bisa dijalankan dalam cluster sehingga tidak perlu takut terjadi down, bahkan mendukung cross beberapa zone / region datacenter.
+
+RabbitMQ, mengikuti standard AMQP (Advanced Message Queuing Protocol).
+Karena RabbitMQ mengikuti standard AMQP, ini menjadikan cara berkomunikasi dengan RabbitMQ bisa dilakukan asalkan kita mengikuti standarisasi AMQP.
+Ini menjadi salah satu keuntungan juga, ketika misal suatu saat kita tidak ingin menggunakan RabbitMQ lagi, kita cukup gunakan Message Broker lain yang mengikuti standard AMQP.

@@ -1,0 +1,26 @@
+### PUBLISH MESSAGE ###
+Seperti yang sudah dibahas di awal, untuk mengirim data atau publish message, hal ini dilakukan ke Exchange.
+RabbitMQ memiliki standard format message.
+
+##Message Format
+- Routing Key 
+  Informasi routing key yang digunakan untuk jenis Direct Exchange untuk merutekan message ke Queue.
+
+- Headers 
+  Informasi tambahkan key-value yang bebas ditambahkan.
+
+- Properties
+  Mirip seperti Headers, namun sudah baku key nya.
+
+- Payload
+  Data yang dikirim oleh Producer.
+
+##Publish Message
+Untuk melakukan publish message, kita bisa menggunakan Web Management.
+Silahkan buka Exchange yang ingin dikirimkan data, pada bagian bawah terdapat form untuk Publish Message.
+
+Excanges > Publish message 
+Routing key: email
+Header: 
+Properties:
+Payload: test email 1

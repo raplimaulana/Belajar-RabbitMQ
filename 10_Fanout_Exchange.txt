@@ -1,0 +1,21 @@
+### FANOUT EXCHANGE ###
+Fanout Exchange adalah tipe Exchange yang akan selalu merutekan setiap data ke seluruh Queue.
+Artinya setiap data yang kita kirim ke Exchange, akan diteruskan ke seluruh Queue.
+Fanout Exchange mirip seperti Broadcast, dimana semua Queue akan menerima data yang sama.
+
+---
+
+#Membuat Exchange
+Exchange > Add a new exchanges 
+
+Name :announcement
+Type: fanout
+Durability: Durable
+Auto delete: no 
+Internal: no
+
+#Membuat Binding
+Queues and Streams > Bindings > Add binding to this queue.
+
+From exchange: announcement
+Routing key: 

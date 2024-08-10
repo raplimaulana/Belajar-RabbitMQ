@@ -1,0 +1,8 @@
+### GOLANG RABBITMQ ###
+
+##Membuat Project Golang
+1. Buat folder belajar-golang-rabbitmq
+2. go mod init belajar-golang-rabbitmq
+3. go get github.com/rabbitmq/amqp091-go (https://github.com/rabbitmq/amqp091-go)
+
+
